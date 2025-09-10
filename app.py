@@ -42,6 +42,5 @@ delitos = df["DELITO"].value_counts()
 st.bar_chart(delitos)
 
 
-
    
 
