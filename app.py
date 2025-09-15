@@ -97,12 +97,18 @@ fig = px.bar(df_delitos, x='DEPARTAMENTO', y='conteo', color='DELITO', barmode='
 st.plotly_chart(fig)
 st.write(df_delitos)
 
-# Tarjetas
-## Tarjeta 1 Municipio con más delitos
-st.markdown (f"""# <h3 style="color: #F2A88D; background-color: #FFF6F5; border: 2px solid #F2A88d; border-radius: 10px; padding:10px;text-align: center"> Municipio con más delitos: <br>{max_municipio.upper()}</h3><br>""", unsafe_allow_html=True)
+# Crear 4 columnas para las tarjetas
+col1, col2, col3, col4 = st.columns(4)
 
-## Tarjeta 2 Cantidad de delitos en el municipio con más delitos
-st.markdown (f"""# <h3 style="color: #F2A88D; background-color: #FFF6F5; border: 2px solid #F2A88d; border-radius: 10px; padding:10px;text-align: center"> con {max_cantidad_municipio} reportes</h3><br>""", unsafe_allow_html=True)
+with col1: 
+    # Tarjetas
+    ## Tarjeta 1 Municipio con más delitos
+    st.markdown (f"""# <h3 style="color: #F2A88D; background-color: #FFF6F5; border: 2px solid #F2A88d; border-radius: 10px; padding:10px;text-align: center"> Municipio con más delitos: <br>{max_municipio.upper()}</h3><br>""", unsafe_allow_html=True)
+
+with col2:
+
+    ## Tarjeta 2 Cantidad de delitos en el municipio con más delitos
+    st.markdown (f"""# <h3 style="color: #F2A88D; background-color: #FFF6F5; border: 2px solid #F2A88d; border-radius: 10px; padding:10px;text-align: center"> con {max_cantidad_municipio} reportes</h3><br>""", unsafe_allow_html=True)
 
 
 st.subheader(f"Municipio con más delitos: {max_municipio} con {max_cantidad_municipio} reportes")
