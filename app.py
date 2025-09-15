@@ -125,4 +125,4 @@ fig = px.pie(
 
 fig.update_traces(textposition='outside', textinfo='percent+label')
 fig.update_layout(showlegend=False, height=400)
-st.plotly_chart(fig)
+st.plotly_chart(fig) 
