@@ -108,7 +108,7 @@ with col1:
 with col2:
 
     ## Tarjeta 2 Cantidad de delitos en el municipio con más delitos
-    st.markdown (f"""# <h3 style="color: #F2A88D; background-color: #FFF6F5; border: 2px solid #F2A88d; border-radius: 10px; padding:10px;text-align: center"> con {max_cantidad_municipio} reportes</h3><br>""", unsafe_allow_html=True)
+    st.markdown (f"""# <h3 style="color: #F2A88D; background-color: #FFF6F5; border: 2px solid #F2A88d; border-radius: 10px; padding:10px;text-align: center"> Delitos reportados <br> {max_cantidad_municipio} reportes</h3><br>""", unsafe_allow_html=True)
 
 
 st.subheader(f"Municipio con más delitos: {max_municipio} con {max_cantidad_municipio} reportes")
